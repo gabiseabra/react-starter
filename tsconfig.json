@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "ES6",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "module": "ES6",
+    "lib": [
+      "es2016"
+    ],
+    "declaration": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

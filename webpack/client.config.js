@@ -10,6 +10,7 @@ const {
   defineConstants
 } = require('webpack-blocks')
 const merge = require('./blocks/merge')
+const typescript = require('./blocks/typescript')
 
 /**
  * Razzle plugin to modify the client bundle's webpack config
@@ -17,6 +18,7 @@ const merge = require('./blocks/merge')
 module.exports = (config) =>
   createConfig([
     merge(config),
+    typescript(),
     /**
      * Service worker configuration
      */

@@ -3,7 +3,7 @@ import {createMemoryHistory} from 'history'
 import {withPropsOnChange} from 'recompose'
 import createApolloClient from '@/graphql/client'
 import createStore from '@/redux/store'
-import MainContextProvider from '@/pages/context'
+import {ContextProvider as MainContextProvider} from '@/pages/context'
 
 export {createApolloClient, createStore}
 
