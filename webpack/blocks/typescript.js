@@ -16,7 +16,7 @@ module.exports = () => (_, {addLoader, merge}) =>
           loader: 'babel-loader',
           options: {babelrc: true, cacheDirectory: true}
         },
-        {loader: 'ts-loader'}
+        {loader: 'ts-loader', options: {transpileOnly: true}}
       ]
     })
   )

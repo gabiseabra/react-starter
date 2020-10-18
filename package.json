@@ -22,6 +22,7 @@
     "mock-server": "emcasa-mock-server",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "format": "yarn lint --fix",
+    "gen-typings": "tsc --declaration --emitDeclarationOnly && eslint src --ext '.d.ts' --fix",
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
