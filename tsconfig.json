@@ -4,6 +4,7 @@
     "target": "ES6",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "module": "ES6",
     "lib": [
       "es2016",
@@ -11,6 +12,7 @@
     ],
     // Ensure that Babel can safely transpile files in the TypeScript project
     "isolatedModules": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
       "@/*": [
