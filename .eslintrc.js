@@ -12,9 +12,31 @@ module.exports = {
       experimentalObjectRestSpread: true,
       jsx: true
     },
+    ecmaVersion: 2020,
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      plugins: ['react', 'prettier', '@typescript-eslint'],
+      extends: [
+        'prettier',
+        'prettier/react',
+        'prettier/@typescript-eslint',
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended'
+      ],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaFeatures: {
+          experimentalObjectRestSpread: true,
+          jsx: true
+        },
+        ecmaVersion: 2020,
+        sourceType: 'module'
+      }
+    }
+  ],
   rules: {
     'prettier/prettier': [
       'error',
@@ -38,11 +60,11 @@ module.exports = {
       }
     ],
     'linebreak-style': ['error', 'unix'],
-    'object-curly-spacing': ['error', 'never'],
     quotes: ['error', 'single'],
     'react/jsx-uses-vars': 1,
     semi: ['error', 'never'],
-    'no-unused-vars': ['error', {argsIgnorePattern: '^_'}]
+    'no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
+    'object-curly-spacing': ['error', 'never']
   },
   globals: {
     process: true
